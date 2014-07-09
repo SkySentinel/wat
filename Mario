@@ -175,10 +175,10 @@
             }
         },
         {
-            "role": "elder",
+            "role": "yoshi",
             "side": "village",
-            "translation": "Puni Elder",
-            "help": "You are the oldest and wisest of the Punies, a group of small sluglike creatures that reside in the great tree in Paper Mario! There are many, many of your kind living in the one area, so anyone you vote for receives 3 votes!",
+            "translation": "Yoshi",
+            "help": "You are one of the famous adorable dinosaurs called Yoshi! You have helped Mario in a lot of his adventures to rescue Princess Peach and have always been by his side. There are many of you around the Mushroom Kingdom, so this makes your vote counts as 3.",
             "actions": {
                 "dummy": {
                     "mode": "ignore",
@@ -1257,7 +1257,7 @@
     "villageCantLoseRoles": [
         "mario",
         "luigi",
-        "elder"
+        "yoshi"
     ],
     "roles1": [
         "toad",
@@ -1326,7 +1326,7 @@
         "luigi",
         "waluigi",
         "boo",
-        "elder",
+        "yoshi",
         "bowserjrtoad",
         "ashley",
         "popple",
@@ -1356,7 +1356,7 @@
         "luigi",
         "waluigi",
         "boo",
-        "elder",
+        "yoshi",
         "bowserjrtoad",
         "ashley",
         "fawful",
