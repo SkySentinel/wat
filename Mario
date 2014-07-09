@@ -1193,9 +1193,9 @@
         {
             "role": "boo",
             "side": "ghosts",
-            "info": "Can kill one person duirng the night. Dies if distracted. Sided with Ghosts.",
+            "info": "Can kill one person during the night, pierces protect. Identifies distracters. Sided with Ghosts.",
             "translation": "Boo",
-            "help": "Boo! I hope I didn't scare you because you are Boo! You are one of the many ghosts that haunt the Mushroom Kingdom and the most famous one. Because of this you can /kill one person during the night to scare them away from the Kingdom, and this is shared with your team. However, you will die if you are distracted, because you're super shy! Your kill cannot be stopped by bodyguards!",
+            "help": "Boo! I hope I didn't scare you because you are Boo! You are one of the many ghosts that haunt the Mushroom Kingdom and the most famous one. Because of this you can /kill one person during the night to scare them away from the Kingdom, and this is shared with your team. If someone distracts you, you'll know who it is because you're so shy they try to comfort you!",
             "actions": {
                 "teamUtilities": true,
                 "dummy": {
@@ -1203,7 +1203,7 @@
                     "msg": "±Info: ~Self~ can kill!"
                 },
                 "distract": {
-                    "mode": "die"
+                    "mode": "identify"
                 },
                 "night": {
                     "kill": {
@@ -1221,6 +1221,7 @@
         {
             "role": "brain",
             "side": "ghosts",
+            "info": "Can kill one person during the night, pierces protect. Can inspect during the night. Sided with Ghosts.",
             "translation": "The Brain",
             "help": "You are a giant Poltergeist and the final boss of any Scarescraper in Luigi's Mansion: Dark Moon! You are super intelligent, and you love to read things, so you can inspect one person during the night. You can also kill someone during the night, and this is shared with your team! Your kill cannot be stopped by bodyguards!",
             "actions": {
