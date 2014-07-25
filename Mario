@@ -308,6 +308,21 @@
                 }
             }
         },
+         {
+            "role": "gadd",
+            "side": "village",
+            "translation": "Elvin Gadd",
+            "help": "You're the quirky Professor Elvin Gadd, inventor of incredible items like the Poltergust, F.L.U.D.D., and even a time machine! You recently made something that allows you to /stalk other people to see who they visit during the night.",
+            "actions": {
+                "night": {
+                    "stalk": {
+                        "common": "Self",
+                        "target": "AnyButSelf",
+                        "priority": 98
+                    }
+                }
+            }
+        },
         {
             "role": "placeholder",
             "side": "village",
