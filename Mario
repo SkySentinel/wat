@@ -5,9 +5,9 @@
         "Sky Sentinel"
     ],
     "summary": "The Mushroom Kingdom is a peaceful place... usually. Bowser has decided to attack the Kingdom again! But this time he is not the only one attacking the Mushroom Kingdom. Beanbean Kingdom has decided to join the fray with Cackletta getting stronger every few nights. The Glitz Pit are here to get revenge on 'The Great Gonzalez'. And you can't forget about Wario and Waluigi, who want to get all of the riches in the Kingdom. Even the Ghosts come back to haunt Luigi and pals! Will the Mushroom Kingdom be able to survive all of these threats? PM Sky Sentinel/Micaiah with comments, concerns, and suggestions :D",
-    "changelog": [
+    "changelog": {
     "7.24.2014": "Testing begins. E. Gadd is added and minor changes are made to fix coding oversights."
-    ],
+    },
     "sides": [
         {
             "side": "village",
