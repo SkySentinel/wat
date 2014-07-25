@@ -571,6 +571,7 @@
             "translation": "Goomba",
             "help": "You have become a lowly Goomba. You can now only /shield your teammates and take actions for them. Since everyone thinks Goombas are a joke, your vote counts as negative one!",
             "actions": {
+                "teamUtilities": true,
                 "dummy": {
                     "mode": "ignore",
                     "msg": "±Info: ~Self~ can shield!"
@@ -701,6 +702,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like a Toad! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
+                "teamUtilities": true,            
                 "inspect": {
                     "revealAs": "toad"
                 },
@@ -772,6 +774,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /toad, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like Mario! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
+                "teamUtilities": true,            
                 "inspect": {
                     "revealAs": "mario"
                 },
@@ -843,6 +846,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /toad, and /goomba to put on the mask that makes you look like them! Right now, you look like Peach! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
+                "teamUtilities": true,            
                 "inspect": {
                     "revealAs": "peach"
                 },
@@ -914,6 +918,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /toad to put on the mask that makes you look like them! Right now, you look like a Goomba! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
+                "teamUtilities": true,            
                 "inspect": {
                     "revealAs": "goomba"
                 },
