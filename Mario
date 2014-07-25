@@ -702,7 +702,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like a Toad! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
-                "teamUtilities": true,            
+                "teamUtilities": true,
                 "inspect": {
                     "revealAs": "toad"
                 },
@@ -774,7 +774,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /toad, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like Mario! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
-                "teamUtilities": true,            
+                "teamUtilities": true,
                 "inspect": {
                     "revealAs": "mario"
                 },
@@ -846,7 +846,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /toad, and /goomba to put on the mask that makes you look like them! Right now, you look like Peach! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
-                "teamUtilities": true,            
+                "teamUtilities": true,
                 "inspect": {
                     "revealAs": "peach"
                 },
@@ -918,7 +918,7 @@
             "translation": "Bowser Jr.",
             "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /toad to put on the mask that makes you look like them! Right now, you look like a Goomba! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
-                "teamUtilities": true,            
+                "teamUtilities": true,
                 "inspect": {
                     "revealAs": "goomba"
                 },
@@ -1260,13 +1260,13 @@
     "killusermsg": "Game over!",
     "lynchmsg": "~Player~ (~Role~) received ~Count~ votes and was kicked out of the Kingdom!",
     "tips": {
-    "Mario": "You should not claim until the Ghost mafia and Wario are gone.",
-    "Ghost Mafia": "YOUR KILL PIERCES PROTECT. You might want to kill revealed PRs.",
-    "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
-    "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man."
-    }
+        "Mario": "You should not claim until the Ghost mafia and Wario are gone.",
+        "Ghost Mafia": "YOUR KILL PIERCES PROTECT. You might want to kill revealed PRs.",
+        "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
+        "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man."
+    },
     "minplayers": 4,
-    "villageCantLoseRoles": ]
+    "villageCantLoseRoles": [
         "mario",
         "luigi",
         "yoshi"
