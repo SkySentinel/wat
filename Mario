@@ -54,7 +54,7 @@
             "role": "mario",
             "side": "village",
             "translation": "Mario",
-            "help": "It's a-me! Wait, it's a-you! You are the star of the show, the one and only... Mario! You like to jump on things and throw fireballs, for God knows what reason. However, this allows you /kill someone during the day! You can't be daykilled yourself!",
+            "help": "It's a-me! Wait, it's a-you! You are the star of the show, the one and only... Mario! You like to jump on things and throw fireballs, for God knows what reason. However, this allows you /kill someone during the day! You can't be daykilled yourself, but you'll be revealed!",
             "actions": {
                 "daykill": "evade",
                 "dummy": {
@@ -65,7 +65,7 @@
                     "kill": {
                         "target": "AnyButSelf",
                         "msg": "You picked up a Fire Flower! Type /kill [name] to take someone out!",
-                        "killmsg": "WAHOO! Mario throws a massive fireball at ~Target~, who is instantly incinerated!"
+                        "killmsg": "WAHOO! ~Self~ throws a massive fireball at ~Target~, who is instantly incinerated!"
                     }
                 }
             }
@@ -1252,7 +1252,7 @@
     ],
     "killmsg": "~Player~ (~Role~) lost all their lives!",
     "killusermsg": "Game over!",
-    "lynchmsg": "~Player~ (~Role~) received ~Number~ votes and was kicked out of the Kingdom!",
+    "lynchmsg": "~Player~ (~Role~) received ~Count~ votes and was kicked out of the Kingdom!",
     "minplayers": 4,
     "villageCantLoseRoles": [
         "mario",
