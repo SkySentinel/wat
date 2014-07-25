@@ -1259,8 +1259,14 @@
     "killmsg": "~Player~ (~Role~) lost all their lives!",
     "killusermsg": "Game over!",
     "lynchmsg": "~Player~ (~Role~) received ~Count~ votes and was kicked out of the Kingdom!",
+    "tips": {
+    "Mario": "You should not claim until the Ghost mafia and Wario are gone.",
+    "Ghost Mafia": "YOUR KILL PIERCES PROTECT. You might want to kill revealed PRs.",
+    "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
+    "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man."
+    }
     "minplayers": 4,
-    "villageCantLoseRoles": [
+    "villageCantLoseRoles": ]
         "mario",
         "luigi",
         "yoshi"
