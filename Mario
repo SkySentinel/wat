@@ -619,8 +619,9 @@
             "side": "bowser",
             "info": "Can kill one person during the night. Can kill2 one person during every other night. Sided with Bowser's Castle. Upon death of entire team, wins the game with Beanbean Kingdom, Ghosts or Wicked Bros. and loses kill2.",
             "translation": "Bowser",
-            "help": "GRAAHAAHAA, you are Bowser! You are the commander of the Koopa Troop and have always wanted to kidnap Peach. However, Mario has always foiled your plans! This time it will be different. You are out for revenge. You can kill during the night and every 2 nights you get a second kill.",
+            "help": "GRAAHAAHAA, you are Bowser! You are the commander of the Koopa Troop and have always wanted to kidnap Peach. However, Mario has always foiled your plans! This time it will be different. You are out for revenge. You can /kill during the night and every 2 nights you get a second kill with /kill2.",
             "actions": {
+                "teamUtilities": true,
                 "onDeadRoles": {
                     "convertTo": {
                         "bowserconsp": [
