@@ -6,7 +6,7 @@
     ],
     "summary": "The Mushroom Kingdom is a peaceful place... usually. Bowser has decided to attack the Kingdom again! But this time he is not the only one attacking the Mushroom Kingdom. Beanbean Kingdom has decided to join the fray with Cackletta getting stronger every few nights. The Glitz Pit are here to get revenge on 'The Great Gonzalez'. And you can't forget about Wario and Waluigi, who want to get all of the riches in the Kingdom. Even the Ghosts come back to haunt Luigi and pals! Will the Mushroom Kingdom be able to survive all of these threats? PM Sky Sentinel/Micaiah with comments, concerns, and suggestions :D",
     "changelog": {
-        "7.24.2014": "Testing begins. E. Gadd is added and minor changes are made to fix coding oversights. Brain does not spawn until the third Boo spawns."
+        "7.24.2014": "Testing begins. E. Gadd is added and minor changes are made to fix coding oversights. Brain does not spawn until the third Boo spawns. Small games changed, with sides generally swapped. Boo's kill changed to half pierce."
     },
     "sides": [
         {
@@ -516,6 +516,40 @@
             }
         },
         {
+            "role": "rookie",
+            "translation": "Rookie",
+            "info": "Can kill and shield at night. When Popple dies, turns into Bowser, loses shield and gets 2 votes. Sided with Beanbean Kingdom.",
+            "side": "beanbean",
+            "help": "You... have amnesia. All you can remember is meeting your master, the Shadow Thief Popple. Now you help him out. You suspect you've me this Mario character before, though. For now, you can /kill someone during the night, and you can /shield Popple to take a hit for him.",
+            "actions": {
+                "teamUtilities": true,
+                "onDeadRoles": {
+                    "convertTo": {
+                        "bowser3": [
+                            "popple"
+                        ]
+                    },
+                    "convertmsg": "GRAHH! King Bowser remembered who he was!"
+                },
+                "night": {
+                    "kill": {
+                        "hide": true,
+                        "common": "Team",
+                        "msg": "Rookie spit fireballs at you!",
+                        "target": "AnyButTeam",
+                        "broadcast": "team",
+                        "priority": 12
+                    },
+                    "shield": {
+                        "common": "Self",
+                        "target": "OnlyTeam",
+                        "broadcast": "team",
+                        "priority": 1
+                    }
+                }
+            }
+        },
+        {
             "role": "beanprio",
             "side": "bowser",
             "translation": "Beanbean Kingdom",
@@ -600,6 +634,36 @@
                         "common": "Self",
                         "target": "OnlyTeam",
                         "priority": 1,
+                        "broadcast": "team"
+                    }
+                }
+            }
+        },
+        {
+            "role": "bowser3",
+            "side": "bowser",
+            "hide": true,
+            "translation": "Bowser",
+            "winningSides": [
+                "beanbean",
+                "ghosts",
+                "wicked"
+            ],
+            "help": "GRAAHAAHAA, you are Bowser! You finally remembered who you were. You have no one left to shield, but you can still /kill someone at night, and your newfound rage fuels your voting power to 2!",
+            "actions": {
+                "vote": 2,
+                "teamUtilities": true,
+                "dummy": {
+                    "mode": "ignore",
+                    "msg": "±Info: ~Self~ can kill!"
+                },
+                "night": {
+                    "kill": {
+                        "common": "Team",
+                        "msg": "Bowser punched you to death!",
+                        "target": "AnyButTeam",
+                        "hide": true,
+                        "priority": 14,
                         "broadcast": "team"
                     }
                 }
@@ -1217,9 +1281,9 @@
         {
             "role": "boo",
             "side": "ghosts",
-            "info": "Can kill one person during the night, pierces protect. Identifies distracters. Sided with Ghosts.",
+            "info": "Can kill one person during the night, pierces protect half of the time. Identifies distracters. Sided with Ghosts.",
             "translation": "Boo",
-            "help": "Boo! I hope I didn't scare you because you are Boo! You are one of the many ghosts that haunt the Mushroom Kingdom and the most famous one. Because of this you can /kill one person during the night to scare them away from the Kingdom, and this is shared with your team. If someone distracts you, you'll know who it is because you're so shy they try to comfort you!",
+            "help": "Boo! I hope I didn't scare you because you are Boo! You are one of the many ghosts that haunt the Mushroom Kingdom and the most famous one. Because of this you can /kill one person during the night to scare them away from the Kingdom, and this is shared with your team. This will go through protects half of the time. If someone distracts you, you'll know who it is because you're so shy they try to comfort you!",
             "actions": {
                 "teamUtilities": true,
                 "dummy": {
@@ -1233,7 +1297,7 @@
                     "kill": {
                         "target": "AnyButTeam",
                         "common": "Team",
-                        "pierce": true,
+                        "pierceChance": 0.5,
                         "priority": 19,
                         "hide": true,
                         "msg": "BOO! You were scared out of the game!",
@@ -1279,9 +1343,9 @@
     "lynchmsg": "~Player~ (~Role~) received ~Count~ votes and was kicked out of the Kingdom!",
     "tips": {
         "Mario": "You should not claim until the Ghost mafia and Wario are gone.",
-        "Ghost Mafia": "YOUR KILL PIERCES PROTECT. You might want to kill revealed PRs.",
+        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs.",
         "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
-        "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man."
+        "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man. Talk it out with Elvin Gadd though."
     },
     "minplayers": 4,
     "villageCantLoseRoles": [
@@ -1295,7 +1359,7 @@
         "geno",
         "boo",
         "toad",
-        "toad",
+        "gadd",
         "boo"
     ],
     "roles2": [
@@ -1304,14 +1368,14 @@
         "peach",
         "toad",
         "geno",
+        "brain",
         "popple",
-        "boo",
         "toad",
-        "boo",
-        "toad",
+        "rookie",
+        "gadd",
         "rosalina",
-        "cackletta",
-        "birdo"
+        "boo",
+        "yoshi"
     ],
     "roles3": [
         "mario",
@@ -1326,7 +1390,7 @@
         "toadette",
         "rosalina",
         "cackletta",
-        "birdo",
+        "yoshi",
         "boo",
         "toad",
         "toad",
@@ -1347,7 +1411,7 @@
         "toadette",
         "rosalina",
         "cackletta",
-        "birdo",
+        "yoshi",
         "boo",
         "toad",
         "ballyhoo",
@@ -1356,7 +1420,7 @@
         "luigi",
         "waluigi",
         "boo",
-        "yoshi",
+        "birdo",
         "bowserjrtoad",
         "ashley",
         "popple",
@@ -1404,6 +1468,7 @@
         "geno",
         "toadette",
         "goomba",
-        "toad"
+        "toad",
+        "gadd"
     ]
 }
