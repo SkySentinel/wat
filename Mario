@@ -151,7 +151,7 @@
             "role": "luigi",
             "side": "village",
             "translation": "Luigi",
-            "info": "Can gust (kill) one person during the night. Sided with Mushroom Kingdom.",
+            "info": "Can gust (kill) one person during the night. Can't be killed by Ghost mafia. Sided with Mushroom Kingdom.",
             "help": "Okiedokie! You are the green-suited brother of Mario! You are usually set aside as player two and are seen as Mario's sidekick, but you don't care! You love your brother and are ready to help him in any way you can. You can type /gust during the night to suck someone into your handy-dandy Poltergust 5000 and get rid of them! You cannot be killed by ghosts!",
             "actions": {
                 "kill": {
