@@ -1356,11 +1356,12 @@
     "roles1": [
         "toad",
         "toad",
-        "geno",
+        "gadd",
         "boo",
         "toad",
-        "gadd",
-        "boo"
+        "geno",
+        "boo",
+        "toad"
     ],
     "roles2": [
         "mario",
