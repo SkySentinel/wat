@@ -68,7 +68,7 @@
                     "kill": {
                         "target": "AnyButSelf",
                         "msg": "You picked up a Fire Flower! Type /kill [name] to take someone out!",
-                        "killmsg": "WAHOO! ~Self~ throws a massive fireball at ~Target~, who is instantly incinerated!"
+                        "killmsg": "WAHOO! Mario (~Self~) jumps out of a Warp Pipe and throws a massive fireball at ~Target~, who is instantly incinerated!"
                     }
                 }
             }
