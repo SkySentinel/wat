@@ -520,7 +520,7 @@
             "translation": "Rookie",
             "info": "Can kill and shield at night. When Popple dies, turns into Bowser, loses shield and gets 2 votes. Sided with Beanbean Kingdom.",
             "side": "beanbean",
-            "help": "You... have amnesia. All you can remember is meeting your master, the Shadow Thief Popple. Now you help him out. You suspect you've me this Mario character before, though. For now, you can /kill someone during the night, and you can /shield Popple to take a hit for him.",
+            "help": "You... have amnesia. All you can remember is meeting your master, the Shadow Thief Popple. Now you help him out. You suspect you've met this Mario character before, though. For now, you can /kill someone during the night, and you can /shield Popple to take a hit for him.",
             "actions": {
                 "teamUtilities": true,
                 "onDeadRoles": {
