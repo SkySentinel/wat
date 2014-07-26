@@ -1342,8 +1342,9 @@
     "killusermsg": "Game over!",
     "lynchmsg": "~Player~ (~Role~) received ~Count~ votes and was kicked out of the Kingdom!",
     "tips": {
-        "Mario": "You should not claim until the Ghost mafia and Wario are gone.",
-        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs.",
+        "Mario": "You should not claim until the Ghost mafia (at least the Brain) and Wario are gone.",
+        "Goombario": "Only Brain can inspect. Mario can kill. If you don't know a lot of roles, you should probably check out /roles to see who your target might be, or ask.",
+        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs. Brain always pierces.",
         "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
         "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man. Talk it out with Elvin Gadd though."
     },
