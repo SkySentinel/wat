@@ -1429,6 +1429,8 @@
         "toad",
         "toadette",
         "boo"
+        "toad",
+        "starlow"
     ],
     "roles5": [
         "mario",
@@ -1464,13 +1466,14 @@
         "boomer",
         "boo",
         "toad",
-        "toadette",
+        "gadd",
         "brain",
         "toad",
         "geno",
         "toadette",
         "goomba",
         "toad",
-        "gadd"
+        "toadette",
+        "toad"
     ]
 }
