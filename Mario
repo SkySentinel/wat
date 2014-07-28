@@ -1310,9 +1310,9 @@
         {
             "role": "brain",
             "side": "ghosts",
-            "info": "Can kill one person during the night, pierces protect. Can inspect during the night. Sided with Ghosts.",
+            "info": "Can kill one person during the night, half of the time. Can inspect during the night. Sided with Ghosts.",
             "translation": "The Brain",
-            "help": "You are a giant Poltergeist and the final boss of any Scarescraper in Luigi's Mansion: Dark Moon! You are super intelligent, and you love to read things, so you can inspect one person during the night. You can also kill someone during the night, and this is shared with your team! Your kill cannot be stopped by bodyguards!",
+            "help": "You are a giant Poltergeist and the final boss of any Scarescraper in Luigi's Mansion: Dark Moon! You are super intelligent, and you love to read things, so you can inspect one person during the night. You can also kill someone during the night, and this is shared with your team! You will pierce through bodyguards half of the time!",
             "actions": {
                 "teamUtilities": true,
                 "dummy": {
@@ -1323,7 +1323,7 @@
                     "kill": {
                         "target": "AnyButTeam",
                         "common": "Team",
-                        "pierce": true,
+                        "pierceChance": 0.5,
                         "priority": 19,
                         "hide": true,
                         "msg": "The Brain threw a really big book your way and it KO'd you!",
@@ -1343,7 +1343,7 @@
             "side": "ghosts",
             "info": "Can kill one person during the night, does not pierce. Vote of 2, voteshield of -1. Sided with Ghosts.",
             "translation": "King Boo",
-            "help": "Gahahaha! As King of the Boos, you've got a lot to prove. You can /kill one person during the night to scare them away, and this is shared with your team. Being a king gives you 2 votes, and you have a voteshield of -1 because your minions help you!",
+            "help": "Gahahaha! As King of the Boos, you've got a lot to prove. You can /kill one person during the night to scare them away, and this is shared with your team. Being a king gives you 2 votes, and you have a voteshield of -1 because your minions help you! You're loud and showy, so your kill does not pierce.",
             "actions": {
                 "teamUtilities": true,
                 "dummy": {
@@ -1369,7 +1369,7 @@
     "tips": {
         "Mario": "You should not claim until the Ghost mafia (at least the Brain) and Wario are gone.",
         "Goombario": "Only Brain can inspect. Mario can kill. If you don't know a lot of roles, you should probably check out /roles to see who your target might be, or ask.",
-        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs. Brain always pierces.",
+        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs.",
         "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
         "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man. Talk it out with Elvin Gadd though."
     },
