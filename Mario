@@ -645,11 +645,6 @@
             "side": "bowser",
             "hide": true,
             "translation": "Bowser",
-            "winningSides": [
-                "beanbean",
-                "ghosts",
-                "wicked"
-            ],
             "help": "GRAAHAAHAA, you are Bowser! You finally remembered who you were. You have no one left to shield, but you can still /kill someone at night, and your newfound rage fuels your voting power to 2!",
             "actions": {
                 "vote": 2,
