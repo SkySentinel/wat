@@ -1310,7 +1310,7 @@
         {
             "role": "brain",
             "side": "ghosts",
-            "info": "Can kill one person during the night, half of the time. Can inspect during the night. Sided with Ghosts.",
+            "info": "Can kill one person during the night, pierces half of the time. Can inspect during the night. Sided with Ghosts.",
             "translation": "The Brain",
             "help": "You are a giant Poltergeist and the final boss of any Scarescraper in Luigi's Mansion: Dark Moon! You are super intelligent, and you love to read things, so you can inspect one person during the night. You can also kill someone during the night, and this is shared with your team! You will pierce through bodyguards half of the time!",
             "actions": {
