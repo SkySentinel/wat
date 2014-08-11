@@ -7,7 +7,8 @@
     "summary": "The Mushroom Kingdom is a peaceful place... usually. Bowser has decided to attack the Kingdom again! But this time he is not the only one attacking the Mushroom Kingdom. Beanbean Kingdom has decided to join the fray with Cackletta getting stronger every few nights. The Glitz Pit are here to get revenge on 'The Great Gonzalez'. And you can't forget about Wario and Waluigi, who want to get all of the riches in the Kingdom. Even the Ghosts come back to haunt Luigi and pals! Will the Mushroom Kingdom be able to survive all of these threats? PM Sky Sentinel/Micaiah with comments, concerns, and suggestions :D",
     "changelog": {
         "7.24.2014": "Testing begins. E. Gadd is added and minor changes are made to fix coding oversights. Brain does not spawn until the third Boo spawns. Small games changed, with sides generally swapped. Boo's kill changed to half pierce.",
-        "7.27.2014": "Added King Boo."
+        "7.27.2014": "Added King Boo.",
+        "8.10.2014": "Bowser survives a lynch. Popple ignores distract. Minor changes were made to spawn. Admiral Bobbery replaces Boomer. Bowser Jr. gets write/shield if he wears Peach/Goomba mask."
     },
     "sides": [
         {
@@ -250,10 +251,10 @@
             }
         },
         {
-            "role": "boomer",
+            "role": "bobbery",
             "side": "village",
-            "translation": "Boomer",
-            "help": "You build it, I blast it! You are a Pixl from Super Paper Mario, and your special ability is BLOWING UP! If someone tries to kill you you will surprise them by BLOWING UP in their FACE!!",
+            "translation": "Admiral Bobbery",
+            "help": "By Blubberly's blotches! You're an wisened old seafarer, but you're also a BOMB! If someone tries to kill you you will surprise them by BLOWING UP in their FACE, old boy!!",
             "actions": {
                 "dummy": {
                     "mode": "ignore",
@@ -358,7 +359,7 @@
             "role": "popple",
             "side": "beanbean",
             "translation": "Popple",
-            "help": "You're the great Shadow Thief Popple, see? You're a Beanish who likes to steal things, which means you like to sneak around a lot. You're not a very good thief, but your sneaking does grant you access to a lot of information such as things that are happening during the night, like kill, distract, and protect, see? You can also /kill someone by smacking them with your giant sack of stolen items. This is shared with Cackletta.",
+            "help": "You're the great Shadow Thief Popple, see? You're a Beanish who likes to steal things, which means you like to sneak around a lot. You're not a very good thief, but your sneaking does grant you access to a lot of information such as things that are happening during the night, like kill, distract, and protect, see? You can also /kill someone by smacking them with your giant sack of stolen items. This is shared with Cackletta, but you ignore distracts.",
             "actions": {
                 "teamUtilities": true,
                 "dummy": {
@@ -367,6 +368,10 @@
                 },
                 "hax": {
                     "kill": {
+                        "revealTeam": 0.2,
+                        "revealPlayer": 0.1
+                    },
+                    "kill2": {
                         "revealTeam": 0.2,
                         "revealPlayer": 0.1
                     },
@@ -382,6 +387,9 @@
                         "revealTeam": 0.1,
                         "revealPlayer": 0.07
                     }
+                },
+                "distract": {
+                    "mode": "ignore"
                 },
                 "night": {
                     "kill": {
@@ -696,9 +704,59 @@
         {
             "role": "bowser",
             "side": "bowser",
-            "info": "Can kill one person during the night. Can kill2 one person during every other night. Sided with Bowser's Castle. Upon death of entire team, wins the game with Beanbean Kingdom, Ghosts or Wicked Bros. and loses kill2.",
+            "info": "Can kill one person during the night. Can kill2 one person during every other night. Survives a single lynch (before convert). Sided with Bowser's Castle. Upon death of entire team, wins the game with Beanbean Kingdom, Ghosts or Wicked Bros. and loses kill2.",
             "translation": "Bowser",
-            "help": "GRAAHAAHAA, you are Bowser! You are the commander of the Koopa Troop and have always wanted to kidnap Peach. However, Mario has always foiled your plans! This time it will be different. You are out for revenge. You can /kill during the night and every 2 nights you get a second kill with /kill2.",
+            "help": "GRAAHAAHAA, you are Bowser! You are the commander of the Koopa Troop and have always wanted to kidnap Peach. However, Mario has always foiled your plans! This time it will be different. You are out for revenge. You can /kill during the night and every 2 nights you get a second kill with /kill2. You will evade one lynch.",
+            "actions": {
+                "teamUtilities": true,
+                "onDeadRoles": {
+                    "convertTo": {
+                        "bowserconsp": [
+                            "bowserjrtoad",
+                            "bowserjrmario",
+                            "bowserjrpeach",
+                            "bowserjrgoomba",
+                            "goomba",
+                            "kamek"
+                        ]
+                    },
+                    "convertmsg": "With the death of all of Bowser's pals, he now can win with more teams!"
+                },
+                "dummy": {
+                    "mode": "ignore",
+                    "msg": "±Info: ~Self~ can kill!"
+                },
+                "night": {
+                    "kill": {
+                        "common": "Team",
+                        "msg": "Bowser punched you to death!",
+                        "target": "AnyButTeam",
+                        "hide": true,
+                        "priority": 14,
+                        "broadcast": "team"
+                    },
+                    "kill2": {
+                        "recharge": 2,
+                        "command": "kill",
+                        "target": "AnyButTeam",
+                        "common": "Self",
+                        "priority": 11,
+                        "msg": "You were tackled by Bowser and lost all of your lives!",
+                        "broadcast": "team"
+                    }
+                },
+                "lynch": {
+                    "convertTo": "bowserlynch",
+                    "convertmsg": "±Bowser: AIRHEADS!!! Trying to get rid of me?!? You MORONS!"
+                }
+            }
+        },
+        {
+            "role": "bowserlynch",
+            "side": "bowser",
+            "hide": true,
+            "translation": "Bowser",
+            "help": "GRAAHAAHAA, you are Bowser! You are the commander of the Koopa Troop and have always wanted to kidnap Peach. However, Mario has always foiled your plans! This time it will be different. You are out for revenge. You can /kill during the night and every 2 nights you get a second kill with /kill2. You can't evade another lynch!",
             "actions": {
                 "teamUtilities": true,
                 "onDeadRoles": {
@@ -776,9 +834,9 @@
         {
             "role": "bowserjrtoad",
             "side": "bowser",
-            "info": "Can wear the mask of Mario, Peach, Goomba, or Toad to be inspected as those roles. Can kill during the night. Sided with Bowser's Castle.",
+            "info": "Can wear the mask of Mario, Peach, Goomba, or Toad to be inspected as those roles. Also gets the power of the roles he takes (except Mario). Can kill during the night. Sided with Bowser's Castle.",
             "translation": "Bowser Jr.",
-            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like a Toad! You can also /kill someone during the night, and this is shared with your team.",
+            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /goomba to put on the mask that makes you look like them! As Peach and Goomba, you gain their abilities. Right now, you look like a Toad! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
                 "teamUtilities": true,
                 "inspect": {
@@ -850,7 +908,7 @@
             "side": "bowser",
             "hide": true,
             "translation": "Bowser Jr.",
-            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /toad, /peach, and /goomba to put on the mask that makes you look like them! Right now, you look like Mario! You can also /kill someone during the night, and this is shared with your team.",
+            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /toad, /peach, and /goomba to put on the mask that makes you look like them! As Peach and Goomba, you gain their abilities. Right now, you look like Mario! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
                 "teamUtilities": true,
                 "inspect": {
@@ -922,7 +980,7 @@
             "side": "bowser",
             "hide": true,
             "translation": "Bowser Jr.",
-            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /toad, and /goomba to put on the mask that makes you look like them! Right now, you look like Peach! You can also /kill someone during the night, and this is shared with your team.",
+            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /toad, and /goomba to put on the mask that makes you look like them! As Peach and Goomba, you gain their abilities. Right now, you look like Peach! This lets you /write a letter to someone, making them think that you are the Princess Peach! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
                 "teamUtilities": true,
                 "inspect": {
@@ -933,6 +991,14 @@
                     "msg": "±Info: ~Self~ can write letters!"
                 },
                 "night": {
+                    "write": {
+                        "command": "dummy2",
+                        "common": "Self",
+                        "target": "AnyButSelf",
+                        "priority": 25,
+                        "dummy2usermsg": "You wrote ~Target~ a nice letter with your name signed on it.",
+                        "dummy2targetmsg": "Dear ~Target~: Please come to the castle. I've baked a cake for you. Yours truly, Princess ~Self~."
+                    },
                     "kill": {
                         "common": "Team",
                         "msg": "Bowser Jr. punched you to death!",
@@ -994,7 +1060,7 @@
             "side": "bowser",
             "hide": true,
             "translation": "Bowser Jr.",
-            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /toad to put on the mask that makes you look like them! Right now, you look like a Goomba! You can also /kill someone during the night, and this is shared with your team.",
+            "help": "You are Bowser Jr., the most important son of Bowser and enemy of Mario! You have a bunch of magic masks that allow you to take the form of other people and be inspected as them. Use them wisely! You can type /mario, /peach, and /toad to put on the mask that makes you look like them! As Peach and Goomba, you gain their abilities. Right now, you look like a Goomba! This means you can /shield someone to take hits for them! You can also /kill someone during the night, and this is shared with your team.",
             "actions": {
                 "teamUtilities": true,
                 "inspect": {
@@ -1005,6 +1071,12 @@
                     "msg": "±Info: ~Self~ can shield!"
                 },
                 "night": {
+                    "shield": {
+                        "common": "Self",
+                        "target": "OnlyTeam",
+                        "priority": 1,
+                        "broadcast": "team"
+                    },
                     "kill": {
                         "common": "Team",
                         "msg": "Bowser Jr. punched you to death!",
@@ -1364,7 +1436,7 @@
     "tips": {
         "Mario": "You should not claim until the Ghost mafia (at least the Brain) and Wario are gone.",
         "Goombario": "Only Brain can inspect. Mario can kill. If you don't know a lot of roles, you should probably check out /roles to see who your target might be, or ask.",
-        "Ghost Mafia": "YOUR KILL PIERCES PROTECT SOMETIMES. You might want to kill revealed PRs.",
+        "Ghost Mafia": "YOUR KILL PIERCES PROTECT HALF THE TIME (except King Boo). You might want to kill revealed PRs.",
         "Rawk Hawk": "Remember to vote wisely since vote count is revealed. Also remember to use your one-shot daykill wisely.",
         "Geno": "In small games, watch whoever you think will die. If someone visited them, that someone is a bad, bad man. Talk it out with Elvin Gadd though."
     },
@@ -1415,11 +1487,30 @@
         "toad",
         "boo",
         "toad",
+        "toadette"
+    ],
+    "roles4": [
+        "mario",
+        "kong",
+        "peach",
+        "geno",
+        "goombario",
+        "popple",
+        "boo",
+        "toad",
+        "brain",
+        "toadette",
+        "rosalina",
+        "cackletta",
+        "yoshi",
+        "toad",
+        "boo",
+        "toad",
         "kamek",
         "bowser",
         "luigi"
     ],
-    "roles4": [
+    "roles5": [
         "mario",
         "kong",
         "peach",
@@ -1451,7 +1542,7 @@
         "toad",
         "starlow"
     ],
-    "roles5": [
+    "roles6": [
         "mario",
         "kong",
         "peach",
@@ -1482,7 +1573,7 @@
         "RAWK",
         "toad",
         "starlow",
-        "boomer",
+        "bobbery",
         "boo",
         "toad",
         "gadd",
